@@ -9,9 +9,10 @@
 1. Ouvrir les couvercles des 2 cœurs.
 2. Vérifier que les PCB soient bien branchés à chacune des batteries.
 3. Allumer l'interrupteur du PCB sur ON.
-4. Fermer le couvercle.
-5. Mettre les 2 pendentifs en présentation.
-6. Appuyer sur le bouton d'un cœur pour allumer l'autre.
+![turn on the pcb](https://github.com/MarineReynaud25/HeartBit/blob/main/charge.png)
+5. Fermer le couvercle.
+6. Mettre les 2 pendentifs en présentation.
+7. Appuyer sur le bouton d'un cœur pour allumer l'autre.
 
 ## Debug
 Si la communication entre les deux cartes ne fonctionne plus :
