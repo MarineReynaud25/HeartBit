@@ -18,7 +18,7 @@
 
 ## Debug
 Si la communication entre les deux cartes ne fonctionne plus :
-- Assurez-vous que la batterie lithium soit suffisamment chargée.
+- Assurez-vous que la batterie lithium soit suffisamment chargée. Vous pouvez la charger avec le module Lipo charger Type C(V1.0).
   
 ![charge the bttery](https://github.com/MarineReynaud25/HeartBit/blob/main/charge.png)
 
