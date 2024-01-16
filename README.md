@@ -19,5 +19,7 @@
 ## Debug
 Si la communication entre les deux cartes ne fonctionne plus :
 - Assurez-vous que la batterie lithium soit suffisamment chargée.
+![charge the bttery](https://github.com/MarineReynaud25/HeartBit/blob/main/charge.png)
+
 - Recharger le code Arduino ci-dessous sur la carte en faisant attention aux macAdress (voir le fichier macAdress pour avoir le code).
 - Si les led ne s'allument pas correctement éteindre attendre un instnat puis rallumer les pcb
