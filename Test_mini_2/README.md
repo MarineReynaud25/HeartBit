@@ -1,38 +1,37 @@
 ## Description
 
-Ce projet permet de mettre en communication 2 esp32 Mini en utilisant le protocole ESP6NOW. Chaque carte est équipée d'un bouton, d'une LED et d'un moteur à vibration. Lorsqu'un bouton sur l'ESP32 A est pressé, cela déclenche la LED et le moteur à vibration sur l'ESP32 B, et vice versa.
+This project enables communication between two ESP32 Mini boards using the ESP-NOW protocol. Each board is equipped with a button, an LED, and a vibration motor. When a button on ESP32 A is pressed, it triggers the LED and vibration motor on ESP32 B, and vice versa.
 
-## Composants
+## Components
 - 2 x ESP32 C3 Mini
-- 2 x Boutons poussoirs
+- 2 x Push Buttons
 - 2 x LEDs
-- 2 x Moteurs à vibration
-- Câbles de connexion
-- Résistances (pour les LEDs)
-- Breadboard oiu carte à trou
+- 2 x Vibration Motors
+- Connection Wires
+- Resistors (for LEDs)
+- Breadboard or Perfboard
 
-## Configuration du Matériel
-1. Connectez les 2 esp32 à une breadboard.
-1. Pour chaque carte connectez le bouton poussoir, a led et le moteur à des pins GPIO de l'ESP32, elles seront appelées INTERRUPT_PIN, LedPin et MOTOR dans le code.
+## Hardware Setup
+1. Connect the 2 ESP32s to a breadboard.
+2. For each board, connect the push button, LED, and motor to the GPIO pins of the ESP32, which will be referred to as INTERRUPT_PIN, LedPin, and MOTOR in the code.
 
 ## Installation
-1.	Installez l'IDE Arduino et les paquets nécessaires pour ESP32.
-2. Clonez ce dépôt sur votre machine locale.
-3. Ouvrez le fichier de code dans l'IDE Arduino.
-4. Téléversez le code sur les deux cartes ESP32.
+1. Install the Arduino IDE and the necessary packages for ESP32.
+2. Clone this repository to your local machine.
+3. Open the code file in the Arduino IDE.
+4. Upload the code to both ESP32 boards.
 
-## Configuration du Logiciel
-- Assurez-vous que les adresses MAC dans le code (`broadcastAddress`) sont correctement définies pour chaque ESP32.
-- Le code doit être téléversé sur les deux ESP32 avec leurs adresses MAC respectives.
+## Software Configuration
+- Ensure the MAC addresses in the code (`broadcastAddress`) are correctly set for each ESP32.
+- The code must be uploaded to both ESP32s with their respective MAC addresses.
 
-## Utilisation
-Après la mise sous tension des deux cartes ESP32, appuyez sur le bouton de l'une des cartes. Cela devrait activer la LED et le moteur à vibration sur l'autre carte.
+## Usage
+After powering up both ESP32 boards, press the button on one of the boards. This should activate the LED and vibration motor on the other board.
 
 ## Code
-Le code fourni établit une communication ESP-NOW entre deux ESP32. Il gère l'envoi et la réception de messages, ainsi que le contrôle des périphériques externes (LED et moteur à vibration) en réponse aux entrées du bouton.
+The provided code establishes ESP-NOW communication between two ESP32s. It handles sending and receiving messages, as well as controlling external devices (LED and vibration motor) in response to button inputs.
 
-### Fonctions Principales
-- `OnDataSent` : Callback appelé après l'envoi d'un message.
-- `OnDataRecv` : Callback appelé à la réception d'un message.
-- `isr_callback` : Fonction appelée lors de l'interruption par le bouton poussoir.
-
+### Main Functions
+- `OnDataSent`: Callback called after sending a message.
+- `OnDataRecv`: Callback called upon receiving a message.
+- `isr_callback`: Function called during interruption by the push button.
