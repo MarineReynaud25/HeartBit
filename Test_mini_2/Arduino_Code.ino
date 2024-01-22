@@ -2,6 +2,7 @@
 #include <WiFi.h>
 
 #define LEDPin 5
+#define MOTORPin 8
 #define INTERRUPT_PIN 7
 #define DELTA 10
 
@@ -39,6 +40,7 @@ void OnDataRecv(const esp_now_recv_info_t *info, const uint8_t *data, int data_l
     Serial.print("LED Status: ");
     Serial.println(incomingMessage.ledStatus ? "ON" : "OFF");
     digitalWrite(LEDPin, incomingMessage.ledStatus);
+    digitalWrite(MOTORPin, incomingMessage.ledStatus);
   } 
 }
 
@@ -48,6 +50,7 @@ void setup() {
   WiFi.mode(WIFI_STA);
   pinMode(INTERRUPT_PIN, INPUT_PULLUP);
   pinMode(LEDPin, OUTPUT);
+  pinMode(MOTORPin, OUTPUT);
 
   if (esp_now_init() != ESP_OK) {
     Serial.println("Error initializing ESP-NOW");
